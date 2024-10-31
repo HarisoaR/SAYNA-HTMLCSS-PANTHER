@@ -34,6 +34,7 @@ html{
 body{
     background: linear-gradient(0deg, #000000, #000000),
     radial-gradient(126.67% 350.28% at -21.35% 0%, #11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%, rgba(2, 23, 64, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    position: relative;
     
 
 }
@@ -101,8 +102,26 @@ ul li a:hover{
     flex-direction: column;
     align-items: center;
     position: fixed;
-    left: 4.1875rem;  /* 67px */
+    left: 4.18rem;  /* 67px */
     top: 23.125rem;   /* 370px */
-    gap: 1.75rem;     /* 28px */
+    gap: 1.75rem;  
+    margin-top: 14px;   /* 28px */
+    
 }
-
+/* design lignes vertical */
+.left{
+    border-left: 3px solid #FFFFFF;
+    position: absolute;
+    height: 615px;
+    margin-left: 54px;
+    top: -50px;
+    
+}
+.right {
+    border-left: 3px solid #FFFFFF;
+    position: absolute;
+    height: 410px;
+    margin-left: 78px;
+    top: -50px;
+    
+}
