@@ -20,6 +20,7 @@
 }
 :root{
     --white-color:#FFFFFF;
+    --lavender-light: #9E91B7;
 }
 
 * {
@@ -91,7 +92,7 @@ ul li a:visited{
 }
 
 ul li a:hover{
-    color:rgba(158, 145, 183, 1);
+    color:var(--lavender-light);
     font-weight: 400;
     text-decoration: underline;   
 
@@ -109,8 +110,8 @@ ul li a:hover{
     
 }
 /* design lignes vertical */
-.left{
-    border-left: 3px solid rgba(158, 145, 183, 1);
+.left-line{
+    border-left: 3px solid var(--lavender-light);
     position: absolute;
     height: 615px;
     margin-left: 54px;
@@ -120,8 +121,8 @@ ul li a:hover{
     
     
 }
-.right {
-    border-left: 3px solid rgba(158, 145, 183, 1);
+.right-line {
+    border-left: 3px solid var(--lavender-light);
     position: absolute;
     height: 410px;
     margin-left: 78px;
@@ -130,7 +131,7 @@ ul li a:hover{
     animation: slideDown1 500ms ease-in 850ms forwards;
     
 }
-/* Animation pour descendre doucement la ligne */
+/* Animation des lignes */
 @keyframes slideDown {
     0% {
         top: -615px; /* Position initiale, hors de l'écran */
@@ -157,3 +158,36 @@ ul li a:hover{
         opacity: 1;
     }
 }
+
+/*  Section hero */
+#hero h1,h3{
+    color:var(--lavender-light);
+}
+#hero h1{
+    font-size:4.25em ;
+    font-family:'Panthera';
+    line-height: 77.71px;
+    font-weight: 400;
+}
+#hero h3{
+    font-size:2em ;
+    font-family: 'Beyno';
+    line-height: 2em;
+    
+}
+.content p{
+     color:var(--white-color) ;
+     font-size: 1em;
+     font-family: 'Cantarell';
+}
+#hero .cta a{
+    color: var(--white-color);
+}
+#hero .container{
+    width: 80%;
+    margin: 0 auto;
+    
+   
+}
+
+
