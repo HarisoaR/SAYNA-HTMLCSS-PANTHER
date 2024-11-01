@@ -110,18 +110,50 @@ ul li a:hover{
 }
 /* design lignes vertical */
 .left{
-    border-left: 3px solid #FFFFFF;
+    border-left: 3px solid rgba(158, 145, 183, 1);
     position: absolute;
     height: 615px;
     margin-left: 54px;
-    top: -50px;
+    top: -53px;
+    opacity: 0;
+    animation: slideDown 500ms ease-in 850ms forwards;
+    
     
 }
 .right {
-    border-left: 3px solid #FFFFFF;
+    border-left: 3px solid rgba(158, 145, 183, 1);
     position: absolute;
     height: 410px;
     margin-left: 78px;
-    top: -50px;
+    top: -53px; 
+    opacity: 0;
+    animation: slideDown1 500ms ease-in 850ms forwards;
     
+}
+/* Animation pour descendre doucement la ligne */
+@keyframes slideDown {
+    0% {
+        top: -615px; /* Position initiale, hors de l'écran */
+        opacity: 0; /* Rend invisible au départ */
+    }
+    15% {
+        opacity: 1; /* Rend la ligne visible avant de descendre */
+    }
+    100% {
+        top: -53px; /* Position finale, descendue */
+        opacity: 1;
+    }
+}
+@keyframes slideDown1 {
+    0% {
+        top: -410px; /* Position initiale, hors de l'écran */
+        opacity: 0; /* Rend invisible au départ */
+    }
+    15% {
+        opacity: 1; /* Rend la ligne visible avant de descendre */
+    }
+    100% {
+        top: -53px; /* Position finale, descendue */
+        opacity: 1;
+    }
 }
