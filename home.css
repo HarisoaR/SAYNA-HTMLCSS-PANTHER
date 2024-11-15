@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Panthera';
+    src: url('ASSETS/fonts/Panthera/PantheraRegular-MVZ9J.ttf') format('truetype'),
+    url('ASSETS/fonts/Panthera/PantheraRegular-MVZ9J.woff');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: 'Beyno';
+    src: url('/ASSETS/fonts/beyno/BEYNO/BEYNO.ttf'),
+    url('/ASSETS/fonts/beyno/BEYNO/BEYNO.woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'wakanda forever';
+    src: url('/ASSETS/fonts/wakanda_forever/WakandaForever-Regular.ttf'),
+    url('/ASSETS/fonts/wakanda_forever/WakandaForever-Regular.woff');
+    font-weight: normal;
+}
+
+body{
+    background: gray;
+}
