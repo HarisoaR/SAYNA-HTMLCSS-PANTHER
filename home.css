@@ -22,7 +22,90 @@
     url('/ASSETS/fonts/wakanda_forever/WakandaForever-Regular.woff');
     font-weight: normal;
 }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 1em;
+}
 
 body{
-    background: gray;
+    background: url(/ASSETS/image-css/arrière_plan.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
 }
+:root {
+    --white-color:#FFFFFF;
+    --lavender-light:#9E91B7;
+}
+/* design navigation */
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.625rem; /* 42px en rem */
+}
+nav .icon-header{
+    display: flex;
+    gap:0.375rem ;
+    justify-content: space-between;
+    align-items: center;
+} 
+nav .icon-header a{
+    display: inline-block; /* qui permet d'appliquer des styles de bloc */
+    background: transparent;
+}
+nav .icon-header:hover{
+    filter:brightness(1.2) drop-shadow(2px 4px 10px rgba(255, 255, 255, 0.7)) ;
+}
+ nav ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 4.875rem;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+ }
+ nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Beyno';
+    color: var(--white-color);
+    transition: color 300ms ease-out, text-decoration 300ms ease-out;
+    
+ }
+ nav ul li a:visited{
+    text-decoration: underline;
+ }
+ nav ul li a:hover{
+    color: var(--lavender-light);
+    font-weight: 400;
+    text-decoration: underline;
+ }
+
+ nav ul li a:active{
+    color: var(--lavender-light);
+    text-decoration: underline;
+ }
+
+ /* design social media */
+ .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left:  4.18rem;/* 67px */
+    top: 23.125rem;   /* 370px */
+    gap: 1.75rem;/* 28px */
+    margin-top: 0.875rem;   
+ }
+
