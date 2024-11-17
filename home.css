@@ -46,6 +46,7 @@ body{
 .container{
     width: 90%;
     margin: 0 auto;
+    max-width: 1200px;
 }
 nav{
     display: flex;
@@ -108,4 +109,239 @@ nav .icon-header:hover{
     gap: 1.75rem;/* 28px */
     margin-top: 0.875rem;   
  }
+ /* design lignes verticales */
+.left-line{
+    border-left: 3px solid var(--lavender-light);
+    position: absolute;
+    height: 615px;
+    margin-left: 54px;
+    top: -53px;
+    opacity: 0;
+    animation: slideDown 500ms ease-in 850ms forwards;
+}
 
+.right-line{
+    border-left: 3px solid var(--lavender-light) ;
+    position: absolute;
+    height: 410px;
+    margin-left: 78px;
+    top: -53px;
+    opacity: 0;
+    animation: slideDown1 500ms ease-in 850ms forwards;
+}
+/* Animation des lignes */
+@keyframes slideDown {
+    0% {
+        top: -615px; /* Position initiale, hors de l'écran */
+        opacity: 0; /* Rend invisible au départ */
+    }
+    15% {
+        opacity: 1; /* Rend la ligne visible avant de descendre */
+    }
+    100% {
+        top: -53px; /* Position finale */
+        opacity: 1;
+    }
+}
+@keyframes slideDown1 {
+    0% {
+        top: -410px; /* Position initiale, hors de l'écran */
+        opacity: 0; /* Rend invisible au départ */
+    }
+    15% {
+        opacity: 1; /* Rend la ligne visible avant de descendre */
+    }
+    100% {
+        top: -53px; /* Position finale*/
+        opacity: 1;
+    }
+}
+/* Media query pour tablettes (écrans entre 768px et 1024px) */
+@media screen and (max-width: 770px) {
+    nav {
+        padding: 2rem;
+    }
+
+    nav .icon-header {
+        gap: 0.5rem;
+    }
+
+    nav ul {
+        gap: 3rem;
+    }
+
+    .social-media {
+        left: 2rem;
+        top: 20rem;
+        gap: 1.5rem;
+    }
+
+    .left-line {
+        height: 500px;
+    }
+
+    .right-line {
+        height: 350px;
+    }
+}
+
+/* Media query pour mobiles (écrans de moins de 768px) */
+@media screen and (max-width: 770px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    nav .icon-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .social-media {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .left-line,
+    .right-line {
+        display: none; /* Masquer les lignes sur mobile */
+    }
+}
+
+/* Media query pour très petits écrans (moins de 480px) */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.875rem;
+    }
+
+    .social-media {
+        gap: 0.75rem;
+    }
+}
+/* design hero */
+#hero h1,h2{
+    color:var(--lavender-light);
+}
+#hero h1{
+    font-size:4.25em ;
+    font-family:'Panthera';
+    line-height:1.2;
+    font-weight: 400;
+}
+#hero h2{
+    font-size:2em ;
+    font-family: 'Beyno';
+    line-height: 1.2;
+
+}
+ p{
+     color:var(--white-color) ;
+     font-size: 1em;
+     font-family: 'Cantarell';
+     text-align: justify;
+     line-height: 1.41em;
+}
+.cta a{
+    color: var(--white-color);
+    font-family: 'Cantarell';
+}
+#hero {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    position: relative;
+
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    height: 100vh;
+    gap: 29px;
+    margin-top: 220px;
+    max-width: 600px;
+}
+#hero .hero-img{
+    position: absolute;
+    width: 55vw;
+    top: 2rem;
+    left: 32rem;
+
+}
+#hero .hero-img {
+    position: absolute;
+    width: 55vw;
+    top: 2rem;
+    left: 32rem;
+}
+/* Écrans moyens (tablettes) */
+@media screen and (max-width: 1024px) {
+    #hero {
+        grid-template-columns: 1fr;
+    }
+
+    .content {
+        width: 60vw;
+        margin-top: 150px;
+        max-width: 500px;
+    }
+
+    #hero .hero-img {
+        width: 65vw;
+        top: 4rem;
+        left: 15rem;
+    }
+}
+
+/* Écrans petits (mobiles) */
+@media screen and (max-width: 768px) {
+    .content {
+        width: 70vw;
+        margin-top: 100px;
+        max-width: 400px;
+       
+    }
+
+    #hero .hero-img {
+        width: 75vw;
+        top: 5rem;
+        left: 10vw;
+    }
+}
+
+/* Très petits écrans (mobiles) */
+@media screen and (max-width: 480px) {
+    .content {
+        width: 90vw;
+        margin-top: 80px;
+        max-width: 350px;
+    }
+
+    #hero .hero-img {
+        width: 90vw;
+        top: 6rem;
+        left: 5vw;
+    }
+}
