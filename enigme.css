@@ -245,19 +245,33 @@ nav .icon-header:hover{
  height: 100vh;
  margin: 0 auto;
  background: url(ASSETS/image-css/Pantherenigme.png) no-repeat;
+  background-size:contain ;
  display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
 }
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0); /* Overlay noir transparent */
+
+  }
 #hero::after {
     content: '';
     position: absolute;
-    top: 675px;
-    bottom:0;
-    right: 40px;
-    width:917px; 
+    top: 600px;
+    bottom:5%;
+    right: 0%;
+    width:50%; 
     height: 571px; 
     background-image: url('ASSETS/image-css/Pantherenigme2.png');
     background-size: cover;
-    background-position:center;
+   background-position: 20px 20px;
     background-repeat: no-repeat;
     z-index:1;
   }
@@ -271,7 +285,8 @@ nav .icon-header:hover{
 
 }
 #hero .text-hero{
-    width: 605px;
+    width: 100%;
+    max-width: 600px;
     margin-top: 331px;
     position:  relative;
 }
@@ -283,7 +298,6 @@ nav .icon-header:hover{
    letter-spacing:8.5%;
    color: var(--lavender-light);
    margin-bottom: 224px;
-   margin-left: -80px;
 }
 #hero p{
     font-family: 'Cantarell';
@@ -297,6 +311,65 @@ nav .icon-header:hover{
 .text-hero .border-bottom{
    margin-left: -80px;
 }
+@media (max-width:1920px) and (min-width:1024px) {
+    #hero{
+        width: 100%;
+        height: 100vh;
+        margin: 0 auto;
+        background: url(ASSETS/image-css/Pantherenigme.png) no-repeat;
+        background-size:1000px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+       }
+       #hero .content-hero{
+        width: 85%;
+        margin: 0 auto;
+        text-align: justify;
+        display: flex;
+        justify-content: flex-end;
+       }
+       #hero .text-hero{
+        width: 100%;
+        max-width: 600px;
+        margin-top: 100px;
+        position:  relative;
+    }
+    #hero h1{
+        font-family: 'Beyno';
+        font-size:  3em ;
+        font-weight: 400;
+       line-height: 1.5;
+       letter-spacing:8.5%;
+       color: var(--lavender-light);
+       margin-bottom: 150px;
+    }
+    #hero p{
+        font-family: 'Cantarell';
+        font-size:1em ;
+        font-weight: 500;
+        line-height:1.2;
+        letter-spacing:-8% ;
+        color: var(--white-color);
+        
+    }
+    #hero::after {
+        content: '';
+        position: absolute;
+        top: 250px;
+        bottom:5%;
+        right: 0%;
+        width:60%; 
+        height: 489px; 
+        background-image: url('ASSETS/image-css/Pantherenigme2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index:1;
+      }
+}
+
+
 /*  design section defi */
 #defi-container{
     width:75%;
@@ -411,7 +484,7 @@ nav .icon-header:hover{
     background-position:center;
     background-repeat: no-repeat;
     z-index:1;
-    
+
 }
 /* Footer */
 footer{
