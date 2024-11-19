@@ -297,3 +297,200 @@ nav .icon-header:hover{
 .text-hero .border-bottom{
    margin-left: -80px;
 }
+/*  design section defi */
+#defi-container{
+    width:75%;
+    margin: 0 auto;
+}
+#defi-container .citation{
+    display: inline-block;
+    width: 900px;
+    height: 158px;
+    font-family: 'Wakanda Forever';
+    font-size:2.5em;
+    font-weight:400 ;
+    line-height: 48px;
+    color: var(--lavender-light);
+}
+#defi-container .defi-content{
+    display: flex;
+    align-items: center;
+    gap:223px ;
+}
+.defi-content .title , p{
+    font-family: 'Cantarell';
+    font-size:1em ;
+    font-weight: 500;
+    color: var(--white-color);
+    letter-spacing: -8%;
+}
+
+.defi-content .alphabet {
+    padding-top: 13px;
+    font-family: 'Cantarell';
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 22.66px;
+    text-transform: uppercase;
+}
+.defi-content .alphabet span{
+    font-family: 'Wakanda Forever';
+    font-size: 1.375em;
+    font-weight: 400;
+    line-height:26.4px ;
+    color: var(--white-color);
+   
+}
+.defi-content .defi-content-left{
+    width: 630px;
+    margin-top: -200px;
+}
+
+.defi-content form .button-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:32.4375rem;
+} 
+.defi-content form label{
+    font-family: 'Cantarell';
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 22.66px;
+    color: var(--white-color);
+    margin: 80px auto 0 auto; 
+    display: inline-block;
+
+}
+
+.defi-content form input{
+    display: block;
+    width: 32.4375rem;
+    height:3.43rem ;
+    padding: 15px;
+    margin-top: 16px;
+    color:#F2CEF2 ;
+    background-color: transparent;
+    border: 1px solid #F2CEF2;
+    border-radius: 37.5px;
+    outline: none;
+} 
+
+.defi-content form button{
+    width: 174.93px;
+    height: 54.78px;
+    color: rgba(2, 23, 64, 1);
+    font-size: 14px;
+    font-family: 'Cantarell';
+    text-transform: uppercase;
+    outline:none;
+    border: none;
+    background: rgba(242, 206, 242, 1);
+    border-radius:37.5px ;
+    margin:31px 0 44px 0;
+}
+.defi-content .defi-content-right{
+    width:500px;
+    text-align: center;
+    position: relative;
+    padding-top: 200px;
+
+
+}
+.defi-content .defi-content-right::after{
+    content: '';
+    position: relative;
+    bottom:315px ;
+    right:168px;
+    width:917px; 
+    height: 528px; 
+    display: flex;
+    background-image: url('ASSETS/image-css/Pantherenigme2.png');
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    z-index:1;
+    
+}
+/* Footer */
+footer{
+    width: 100%;
+    height: auto;
+    margin-top:0;
+    padding: 196px 0px 93px 0;
+    background-image:url(ASSETS/image-css/back_footer.png);
+    background-size: cover;
+}
+.footer-container{
+    width: 65%;
+    height:300px ;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-between;
+   
+  
+}
+.footer-container .logo-footer-marvel{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    background-image: url(ASSETS/image-css/footer1.png);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:300px;
+}
+
+.footer-container span{
+        font-family: 'Cantarell';
+         font-size: 22px; 
+         font-weight: 700;
+         color: var(--white-color);
+         line-height: 31.15px;
+         letter-spacing: 28%;
+}
+.footer-container .pages{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.footer-container .pages p{
+     font-family: 'Raleway', sans-serif;
+    font-size:18px ;
+    font-weight: 500;
+    color: var(--white-color);
+ }
+ .footer-container .social-footer{
+    display: flex;
+    flex-direction: row;
+    gap: 38px;
+    margin-top: 14px;
+ }
+
+.copyright {
+    width: 65%;
+    margin: 0 auto;
+}
+.copyright p{
+    text-align: end;
+    margin-bottom: 10px;
+   font-size:1em;
+    font-family: 'Raleway' ,sans-serif;
+    font-weight: 500;
+    line-height:18.78px;
+    margin-top: 20;
+   
+   
+}
+.copyright p a{
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.pages span{
+    color: #FFFFFF;
+}
+.social span{
+    color: #FFFFFF;
+}
