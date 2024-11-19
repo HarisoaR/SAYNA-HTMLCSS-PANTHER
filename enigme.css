@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'Panthera';
+    src: url('ASSETS/fonts/Panthera/PantheraRegular-MVZ9J.ttf') format('truetype'),
+    url('ASSETS/fonts/Panthera/PantheraRegular-MVZ9J.woff');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: 'Beyno';
+    src: url('/ASSETS/fonts/beyno/BEYNO/BEYNO.ttf'),
+    url('/ASSETS/fonts/beyno/BEYNO/BEYNO.woff');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'wakanda forever';
+    src: url('/ASSETS/fonts/wakanda_forever/WakandaForever-Regular.ttf'),
+    url('/ASSETS/fonts/wakanda_forever/WakandaForever-Regular.woff');
+    font-weight: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 1em;
+}
+
+body{
+    background: url(/ASSETS/image-css/arrière_plan.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+:root {
+    --white-color:#FFFFFF;
+    --lavender-light:#9E91B7;
+    --Midnight-Blue:rgba(2, 23, 64, 0.8);
+}
+/* design navigation */
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2.625rem; /* 42px en rem */
+}
+nav .icon-header{
+    display: flex;
+    gap:0.375rem ;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .icon-header a{
+    display: inline-block; /* qui permet d'appliquer des styles de bloc */
+    background: transparent;
+}
+nav .icon-header:hover{
+    filter:brightness(1.2) drop-shadow(2px 4px 10px rgba(255, 255, 255, 0.7)) ;
+}
+ nav ul{
+    display: flex;
+    justify-content: space-around;
+    gap: 4.875rem;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+ }
+ nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Beyno';
+    color: var(--white-color);
+    transition: color 300ms ease-out, text-decoration 300ms ease-out;
+
+ }
+ nav ul li a:visited{
+    text-decoration: underline;
+ }
+ nav ul li a:hover{
+    color: var(--lavender-light);
+    font-weight: 400;
+    text-decoration: underline;
+ }
+
+ nav ul li a:active{
+    color: var(--lavender-light);
+    text-decoration: underline;
+ }
+
+ /* design social media */
+ .social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    left:  4.18rem;/* 67px */
+    top: 23.125rem;   /* 370px */
+    gap: 1.75rem;/* 28px */
+    margin-top: 0.875rem;
+ }
+ /* design lignes verticales */
+.left-line{
+    border-left: 3px solid var(--lavender-light);
+    position: absolute;
+    height: 615px;
+    margin-left: 54px;
+    top: -53px;
+    opacity: 0;
+    animation: slideDown 500ms ease-in 850ms forwards;
+}
+
+.right-line{
+    border-left: 3px solid var(--lavender-light) ;
+    position: absolute;
+    height: 410px;
+    margin-left: 78px;
+    top: -53px;
+    opacity: 0;
+    animation: slideDown1 500ms ease-in 850ms forwards;
+}
+/* Animation des lignes */
+@keyframes slideDown {
+    0% {
+        top: -615px; /* Position initiale, hors de l'écran */
+        opacity: 0; /* Rend invisible au départ */
+    }
+    15% {
+        opacity: 1; /* Rend la ligne visible avant de descendre */
+    }
+    100% {
+        top: -53px; /* Position finale */
+        opacity: 1;
+    }
+}
+@keyframes slideDown1 {
+    0% {
+        top: -410px; /* Position initiale, hors de l'écran */
+        opacity: 0; /* Rend invisible au départ */
+    }
+    15% {
+        opacity: 1; /* Rend la ligne visible avant de descendre */
+    }
+    100% {
+        top: -53px; /* Position finale*/
+        opacity: 1;
+    }
+}
+/* Media query pour tablettes (écrans entre 768px et 1024px) */
+@media screen and (max-width: 770px) {
+    nav {
+        padding: 2rem;
+    }
+
+    nav .icon-header {
+        gap: 0.5rem;
+    }
+
+    nav ul {
+        gap: 3rem;
+    }
+
+    .social-media {
+        left: 2rem;
+        top: 20rem;
+        gap: 1.5rem;
+    }
+
+    .left-line {
+        height: 500px;
+    }
+
+    .right-line {
+        height: 350px;
+    }
+}
+
+/* Media query pour mobiles (écrans de moins de 768px) */
+@media screen and (max-width: 770px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+    }
+
+    nav .icon-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .social-media {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+    }
+
+    .left-line,
+    .right-line {
+        display: none; /* Masquer les lignes sur mobile */
+    }
+}
+
+/* Media query pour très petits écrans (moins de 480px) */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.875rem;
+    }
+
+    .social-media {
+        gap: 0.75rem;
+    }
+}
